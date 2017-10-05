@@ -1,0 +1,36 @@
+{
+  "name": "屏蔽CSDN广告",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "Chrome插件demo",
+  "browser_action": {
+    "default_icon": "bd.png"
+  },
+  "icons": {
+    "16":"bd.png",
+    "48":"bd.png",
+    "128":"bd.png"
+  },
+  "browser_action":
+  {
+    "default_icon": "bd.png",
+    // 图标悬停时的标题，可选
+    "default_title": "这是一个示例Chrome插件"
+  },
+  "content_scripts": [{
+    "matches": ["http://*.csdn.net/*"],
+    "js": ["csdn.js"],
+    "run_at": "document_end"
+  },
+    {
+      "matches": ["https://www.liaoxuefeng.com/*"],
+      "js": ["liaoxuefeng.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://www.sass.hk/*/"],
+      "js": ["sass.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

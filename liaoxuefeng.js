@@ -1,0 +1,2 @@
+document.getElementsByClassName('x-sponsor-b')[0].parentNode.removeChild(document.getElementsByClassName('x-sponsor-b')[0]);
+document.getElementsByClassName('x-sponsor-a')[0].parentNode.removeChild(document.getElementsByClassName('x-sponsor-a')[0]);
