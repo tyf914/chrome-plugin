@@ -1,5 +1,5 @@
 {
-  "name": "屏蔽CSDN广告",
+  "name": "自定义插件",
   "manifest_version": 2,
   "version": "1.0",
   "description": "Chrome插件demo",
@@ -17,19 +17,25 @@
     // 图标悬停时的标题，可选
     "default_title": "这是一个示例Chrome插件"
   },
-  "content_scripts": [{
-    "matches": ["http://*.csdn.net/*"],
-    "js": ["csdn.js"],
-    "run_at": "document_end"
-  },
-    {
+  "content_scripts": [
+    { // 屏蔽CSDN广告
+      "matches": ["http://*.csdn.net/*"],
+      "js": ["csdn.js"],
+      "run_at": "document_end"
+    },
+    { // 屏蔽廖雪峰老师教程广告
       "matches": ["https://www.liaoxuefeng.com/*"],
       "js": ["liaoxuefeng.js"],
       "run_at": "document_end"
     },
-    {
+    { // 屏蔽SASS教程广告
       "matches": ["https://www.sass.hk/*/"],
       "js": ["sass.js"],
+      "run_at": "document_end"
+    },
+    { // 为顶点小说添加小说内容自适应功能
+      "matches": ["http://www.x23us.com/*/*/*/*.html"],
+      "js": ["x23us.js"],
       "run_at": "document_end"
     }
   ]

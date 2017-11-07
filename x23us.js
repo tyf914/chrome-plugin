@@ -1,0 +1,1 @@
+document.getElementById('contents').style.cssText+='width: 90vw';
