@@ -18,11 +18,12 @@
     "default_title": "这是一个示例Chrome插件"
   },
   "content_scripts": [
-    { // 屏蔽CSDN广告
-      "matches": ["http://*.csdn.net/*"],
-      "js": ["csdn.js"],
-      "run_at": "document_end"
-    },
+//    CSDN页面改版，运行此程序会导致无法点击“阅读全文”
+//    { // 屏蔽CSDN广告
+//      "matches": ["http://*.csdn.net/*"],
+//      "js": ["csdn.js"],
+//      "run_at": "document_end"
+//    },
     { // 屏蔽廖雪峰老师教程广告
       "matches": ["https://www.liaoxuefeng.com/*"],
       "js": ["liaoxuefeng.js"],
@@ -34,8 +35,13 @@
       "run_at": "document_end"
     },
     { // 为顶点小说添加小说内容自适应功能
-      "matches": ["http://www.x23us.com/*/*/*/*.html"],
+      "matches": ["http://www.x23us.com/*/*/*/*.html", "http://www.23us.so/files/article/html/*/*/*.html"],
       "js": ["x23us.js"],
+      "run_at": "document_end"
+    },
+    { // 为笔趣阁小说添加小说内容自适应功能
+      "matches": ["http://www.qu.la/book/*/*.html", "http://www.biquge.cm/*/*/*.html"],
+      "js": ["qula.js"],
       "run_at": "document_end"
     }
   ]

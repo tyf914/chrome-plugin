@@ -1,1 +1,1 @@
-document.getElementById('contents').style.cssText+='width: 90vw';
+document.getElementById('contents').style.cssText+='width: 80vw';
